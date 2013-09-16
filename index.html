@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>Web Schema</title>
+    <script src='http://www.w3.org/Tools/respec/respec-w3c-common' async></script>
+    <script class='remove'>
+      var respecConfig = {
+              specStatus:   "unofficial"
+          ,   shortName:    "web-schema"
+          ,   editors:      [{ name: "Robin Berjon", url: "http://berjon.com/",
+                               company: "W3C", companyURL: "http://w3.org/" }]
+          ,   wg:           "HTML Working Group"
+          ,   wgURI:        "http://www.w3.org/html/wg/"
+          ,   wgPublicList: "public-html"
+          ,   wgPatentURI:  "http://www.w3.org/2004/01/pp-impl/40318/status"
+          ,   edDraftURI:   "http://darobin.github.io/web-schema-spec/"
+        };
+    </script>
+  </head>
+  <body>
+    <section id='abstract'>
+      <p>
+        A lot of data exchange takes place on the back of Web technology: JSON over HTTP, HTML
+        forms, database backends, and more. However, at each stage in the data production and usage
+        flow there are impedance mismatches. Data validation is done differently on the client side,
+        the server side, and in the database. Forms are hand-crafted to match a loose data model,
+        often poorly. APIs to Web systems are documented using yet another system.
+      </p>
+      <p>
+        Since it is essentially the same data that is being used at each stage, it could benefit 
+        from a common definition. The goal of Web Schema is to provide a useful intersection between
+        the data model that HTML forms can capture, JSON, and common constraints used in databases
+        that serve Web systems. It further aims to do so in a way that is simple to implement and
+        using a language that is simple to author, including by hand. While validation is one of the
+        goals of Web Schema, it is not the only one. For instance, generating HTML forms and as much
+        of the paraphernalia of data processing in a Web context as possible are explicit 
+        priorities.
+      </p>
+    </section>
+  </body>
+</html>
+
