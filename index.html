@@ -38,6 +38,65 @@
         priorities.
       </p>
     </section>
+    <section class='informative'>
+      <h1>Introduction</h1>
+      <p>
+        Data on the Web is hard. And we reinvent it all the time.
+      </p>
+      <p>
+        If you have a form that's talking to an HTTP API using JSON, chances are that your 
+        bi-directional binding that allows you to create and edit fields in the API inside a browser
+        and to load content from the API into the form is entirely ad-hoc. Tools like AngularJS
+        can make the process simpler, notably at the UI level, but you still have to hand-craft a
+        form that corresponds to the data model, and wire that into AngularJS (or any other similar
+        library).
+      </p>
+      <p>
+        Similarly, the validation that is performed on the client will be different (and largely
+        if not entirely rewritten) from that which takes place on the server; and it's not unlikely
+        that your database will in turn have its own validation layer.
+      </p>
+      <p>
+        We do have tools that help here and there, with parts of the problem, usually for a single
+        platform. But we keep reinventing those parts and finding limitations in them that need
+        painful workarounds.
+      </p>
+      <p>
+        The goal of Web Schema is to provide a foundation that enables:
+      </p>
+      <ul>
+        <li>client-side validation, of JavaScript objects or of forms;</li>
+        <li>server-side validation;</li>
+        <li>database schema generation;</li>
+        <li>
+          HTML form generation, in a customisable fashion that does not pigeon-hole developers;
+        </li>
+        <li>conversion to and from other formats, as needed.</li>
+      </ul>
+      <p>
+        To be entirely clear: Web Schema does <em>not</em> intend to provide all of the above 
+        built-in. Rather, it defines a common, simple language that enables a shared data model so
+        that the above services can be built on top of it with minimal effort. The idea is that a
+        shared way of describing data and a common data model enables many use cases to be addressed
+        and plugged together.
+      </p>
+      <p>
+        The parts that this specification covers explicitly are:
+      </p>
+      <ul>
+        <li>a core language to describe data;</li>
+        <li>validation of JSON objects;</li>
+        <li>and validation of HTML form data.</li>
+      </ul>
+      <p>
+        In developing this technology, inspiration was taken largely from two sources. First,
+        JSON Schema, which provides a great starting place. The primary reason it is not used 
+        directly is to maintain the ability to break it freely (and break it we do). Second, HTML
+        forms. Few people have noticed that forms actually define a schema language of their own,
+        and an explicit goal of Web Schema is to interoperate strongly with forms so as to provide
+        a simple bidirectional mapping between HTML forms and a flexible data model.
+      </p>
+    </section>
   </body>
 </html>
 
